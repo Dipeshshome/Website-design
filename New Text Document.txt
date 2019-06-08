@@ -1,0 +1,228 @@
+!doctype html
+html lang=en
+head
+    !-- Required meta tags --
+    meta charset=utf-8
+    meta name=viewport content=width=device-width, initial-scale=1, shrink-to-fit=no
+
+    !-- Bootstrap CSS --
+    link rel=stylesheet href=cssbootstrap.min.css 
+    link rel=stylesheet href=cssmain.css 
+
+    titleBootstraptitle
+head
+body
+	div class=container
+		div class=row
+			div class=col-md-12
+				div class=alert alert-danger role=alertA simple alertdiv
+				div class=alert alert-warning alert-dismissible fade show role=alert
+					strongHoly guacamolestrong
+					You should check in on some of these fields below.
+					button type=buttonclass=close data-dismiss=alert aria-label=close
+						span aria-hidden=true&times;span
+						
+					button
+                button type=buttonclass=btn btn-outline-primaryPrimarybutton
+				div
+
+			div
+			
+		div
+	div
+
+!-- Optional JavaScript --
+!-- jQuery first, then Popper.js, then Bootstrap JS --
+script src=jsjquery.min.jsscript
+script src=jspopper.min.jsscript
+script src=jsbootstrap.min.jsscript
+body
+html
+
+
+
+-------
+
+
+if(isset($_POST['submit'])){
+$name= $_POST['name'];
+$subject= $_POST['subject'];
+$v_email= $_POST['email'];
+$message= $_POST['message'];
+$email_to='durjoydipesh789@gmail.com';
+
+$headers="From: ".$v_email;
+----------------------------------
+
+
+<!doctype html>
+<html lang="en">
+
+<?php
+    
+if(isset($_POST['submit'])){
+$name= $_POST['name'];
+$subject= $_POST['subject'];
+$v_email= $_POST['email'];
+$message= $_POST['message'];
+$email_to='durjoydipesh789@gmail.com';
+
+$headers="From: ".$v_email;
+$txt="You have recieved an email from" .$name.".\n\n".$message;
+mail($email_to,$subject,$txt,$headers);
+header("location:contactForm.php");
+}
+?>
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+    
+    
+    <title>Contact</title>
+   
+   
+</head>
+<body>
+
+	<section id="Contact" >
+		<div class="ContactBackground">
+			<div class="header">
+			<h1 style="color: white; font-family: 'serif'">SAY HELLOW!!!</h1>
+			<h3 style="color: white; font-family: 'Pacifico';">WE ARE ALWAYS READY TO SERVE YOU</h3>
+		</div>
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="contactbox">
+						<div class="container">
+							<form class="formcontrol" action=" " method="POST" >
+			<input  type="text" name="name"   placeholder="Your Name" required>
+			<br>
+			<input type="text" name="subject"  placeholder="Your Subject" required>
+			<br>
+			<input type="text" name="email"  placeholder="Your Email" required>
+			<br>
+			<textarea type="message" name="message"  placeholder="Message" row="8" required></textarea>
+            <br>
+            <button type="submit" name="submit" class="submit" >SEND MESSAGE</button>
+
+		</form>
+						</div>
+			
+					</div>
+
+			
+				</div>
+
+				<div class="col-md-6">
+					<div class="contactbox2">
+						
+						<i class='fas fa-phone-volume' style='font-size:36px'><a style ="font-size:15px" class="p-3">Let's Talk</a></i>
+					
+						<p style ="font-size:15px" class="p-3">+8801521325108  <br> +8801822409776</p>
+					
+						<i class="fa fa-map-marker" style="font-size:36px"><a style ="font-size:15px" class="p-3">ADDRESS</a></i>
+					
+						<p style ="font-size:15px" class="p-3">15/9/C Modhubag,Moghbzar.Dhaka</p>
+						
+						<i class="fa fa-comments" style="font-size:36px"><a style ="font-size:15px" class="p-3">General Support</a></i>
+						
+						<p style ="font-size:15px" class="p-3">durjoydipesh789@gmail.com <br> tipuanika1231@gmail.com</p>
+							
+					
+					</div>
+				</div>
+				
+			</div>
+			
+		
+		</div>
+
+		
+
+		</div>
+
+		
+		
+				
+		
+		
+	</section>
+
+
+	
+	   
+
+
+
+	
+	
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+$txt="You have recieved an email from" .$name.".\n\n".$message;
+mail($email_to,$subject,$txt,$headers);
+header("location:contactForm.php");
+}
+
+
+
+
+
+
+
+
+
+
+
+#Contact .contactbox .formcontrol{
+	background-color: #dfdfdf;
+	width: 100%;
+	text-align: center;	
+	border-radius: 20px;
+
+}
+
+#Contact  .contactbox2{
+	background-color: white;
+	width: 80%;		
+	text-align: center;
+
+	
+}
+
+
+
+
+
+ <li style="padding: 2%;"><i class="fa-li icon"><img src="images/men.png"></i><a  style="font-size: 15px; color: black;" href="">Men's Fashion</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/women.jpg"></i><a style="font-size:15px;color: black " href="">Women's Fashion</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/watch.png"></i><a  style="font-size:15px;color: black" href="">Watch and Clock</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/laptop.png"></i><a  style="font-size: 15px; color: black;" href="">Computer & Tab</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/mobile.jpg"></i><a style="font-size:15px;color: black " href="">Mobile & Laptop </a></li>          
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/household.jpg"></i><a  style="font-size: 15px; color: black;" href="">Household</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/beauty.jpg"></i><a style="font-size:15px;color: black " href="">Beauty Health</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/tools.png"></i><a  style="font-size:15px;color: black" href="">Parts & Tools</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/grocer.png"></i><a  style="font-size: 15px; color: black;" href="">Grocer & Food</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/other.png"></i><a  style="font-size:15px;color: black" href="">Other Categories</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/men.png"></i><a  style="font-size: 15px; color: black;" href="">Grocer & Food</a></li>
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/mobile.jpg"></i><a style="font-size:15px;color: black " href="">Mobile & Laptop </a></li>          
+                          <li style="padding: 2%;"><i class="fa-li icon"><img src="images/household.jpg"></i><a  style="font-size: 15px; color: black;" href="">Household</a></li>
+                        

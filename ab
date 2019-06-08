@@ -1,0 +1,24 @@
+<div class="item-block-1">
+                            <div class="image-wrapper">
+                                <div class="image">
+                                    <div class="overlay">
+                                        <div class="position">
+                                            <div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis metus non erat tincidunt consectetur. Maecenas ac turpis id lorem.</p>
+                                                <a href="#" class="quickshop">Quick shop</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <?php                                 
+                                    while($row = mysql_fetch_array($result))
+                                       {
+                                  ?>
+                                   <div>
+                                      <img src="new/<?php echo $row['name']; ?>"/>
+                                   </div>
+                                    <?php
+                                       }       
+                                     ?> 
+                                   </div>
+                                </div>
+                            </div>
